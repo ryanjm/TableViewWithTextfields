@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "TextCellsTableViewController.h"
 
 @interface ViewController ()
 
@@ -22,6 +23,18 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"manyCellSegue"]) {
+        TextCellsTableViewController *tableView = segue.destinationViewController;
+        tableView.numOfRows = 15;
+    }
+    else {
+        TextCellsTableViewController *tableView = segue.destinationViewController;
+        tableView.numOfRows = 1;
+    }
 }
 
 @end

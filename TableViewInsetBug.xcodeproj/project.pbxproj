@@ -14,6 +14,8 @@
 		1C7689E81B5ECFFA009A31E7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C7689E71B5ECFFA009A31E7 /* Images.xcassets */; };
 		1C7689EB1B5ECFFA009A31E7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C7689E91B5ECFFA009A31E7 /* LaunchScreen.xib */; };
 		1C7689F71B5ECFFA009A31E7 /* TableViewInsetBugTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7689F61B5ECFFA009A31E7 /* TableViewInsetBugTests.m */; };
+		1C768A021B5ED431009A31E7 /* TextCellsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C768A011B5ED431009A31E7 /* TextCellsTableViewController.m */; };
+		1C768A051B5ED491009A31E7 /* TextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C768A041B5ED491009A31E7 /* TextTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		1C7689F01B5ECFFA009A31E7 /* TableViewInsetBugTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableViewInsetBugTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C7689F51B5ECFFA009A31E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C7689F61B5ECFFA009A31E7 /* TableViewInsetBugTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewInsetBugTests.m; sourceTree = "<group>"; };
+		1C768A001B5ED431009A31E7 /* TextCellsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextCellsTableViewController.h; sourceTree = "<group>"; };
+		1C768A011B5ED431009A31E7 /* TextCellsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextCellsTableViewController.m; sourceTree = "<group>"; };
+		1C768A031B5ED491009A31E7 /* TextTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextTableViewCell.h; sourceTree = "<group>"; };
+		1C768A041B5ED491009A31E7 /* TextTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,10 @@
 				1C7689E71B5ECFFA009A31E7 /* Images.xcassets */,
 				1C7689E91B5ECFFA009A31E7 /* LaunchScreen.xib */,
 				1C7689DA1B5ECFFA009A31E7 /* Supporting Files */,
+				1C768A001B5ED431009A31E7 /* TextCellsTableViewController.h */,
+				1C768A011B5ED431009A31E7 /* TextCellsTableViewController.m */,
+				1C768A031B5ED491009A31E7 /* TextTableViewCell.h */,
+				1C768A041B5ED491009A31E7 /* TextTableViewCell.m */,
 			);
 			path = TableViewInsetBug;
 			sourceTree = "<group>";
@@ -219,7 +229,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C768A021B5ED431009A31E7 /* TextCellsTableViewController.m in Sources */,
 				1C7689E31B5ECFFA009A31E7 /* ViewController.m in Sources */,
+				1C768A051B5ED491009A31E7 /* TextTableViewCell.m in Sources */,
 				1C7689E01B5ECFFA009A31E7 /* AppDelegate.m in Sources */,
 				1C7689DD1B5ECFFA009A31E7 /* main.m in Sources */,
 			);
@@ -350,6 +362,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TableViewInsetBug/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -360,6 +373,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TableViewInsetBug/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
