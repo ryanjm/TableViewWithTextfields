@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NGX-mi-pJN">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
@@ -17,26 +18,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gvo-bh-R4I">
-                                <rect key="frame" x="220" y="127" width="170" height="30"/>
-                                <state key="normal" title="Many Cells (No Problem)">
+                                <rect key="frame" x="267" y="127" width="76" height="30"/>
+                                <state key="normal" title="Many Cells">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="a1k-SZ-uhd" kind="show" identifier="manyCellSegue" id="tL5-uV-927"/>
+                                    <segue destination="drB-qW-vhF" kind="show" identifier="manyCellSegue" id="BDc-EM-ZOm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vik-Kr-jiP">
-                                <rect key="frame" x="236" y="192" width="129" height="30"/>
-                                <state key="normal" title="One Cell (Problem)">
+                                <rect key="frame" x="271" y="192" width="59" height="30"/>
+                                <state key="normal" title="One Cell">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="a1k-SZ-uhd" kind="show" identifier="oneCellSegue" id="Q6K-5a-zAT"/>
+                                    <segue destination="drB-qW-vhF" kind="show" identifier="oneCellSegue" id="QaE-eW-t69"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A2s-hw-EPM">
+                                <rect key="frame" x="255" y="262" width="90" height="30"/>
+                                <state key="normal" title="Working TVC">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="a1k-SZ-uhd" kind="show" identifier="basicTVC" id="LVU-Bm-ARv"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="A2s-hw-EPM" firstAttribute="centerX" secondItem="Vik-Kr-jiP" secondAttribute="centerX" constant="-0.5" id="MsV-1F-5Go"/>
+                            <constraint firstItem="A2s-hw-EPM" firstAttribute="top" secondItem="Vik-Kr-jiP" secondAttribute="bottom" constant="40" id="VB7-Nc-JYV"/>
                             <constraint firstItem="Vik-Kr-jiP" firstAttribute="top" secondItem="Gvo-bh-R4I" secondAttribute="bottom" constant="35" id="X5H-nA-46V"/>
                             <constraint firstItem="Gvo-bh-R4I" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="63" id="gZ5-mm-URL"/>
                             <constraint firstItem="Vik-Kr-jiP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jYs-oX-E6a"/>
@@ -49,10 +61,43 @@
             </objects>
             <point key="canvasLocation" x="1287" y="479"/>
         </scene>
+        <!--Container View Controller-->
+        <scene sceneID="lSP-Gs-Ez6">
+            <objects>
+                <viewController id="drB-qW-vhF" customClass="ContainerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Sfq-R0-L3X"/>
+                        <viewControllerLayoutGuide type="bottom" id="Glc-8p-RXC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0zn-mH-Ndk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h8H-8y-XGy">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="h8H-8y-XGy" secondAttribute="trailing" id="6kJ-Vd-qK1"/>
+                            <constraint firstItem="h8H-8y-XGy" firstAttribute="leading" secondItem="0zn-mH-Ndk" secondAttribute="leading" id="ATC-NQ-t7Z"/>
+                            <constraint firstItem="h8H-8y-XGy" firstAttribute="top" secondItem="Sfq-R0-L3X" secondAttribute="bottom" id="dFH-iq-xL6"/>
+                            <constraint firstItem="h8H-8y-XGy" firstAttribute="bottom" secondItem="Glc-8p-RXC" secondAttribute="top" id="fyi-4G-EMj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomLayoutGuideConstraint" destination="fyi-4G-EMj" id="NYO-Db-hQB"/>
+                        <outlet property="containerView" destination="h8H-8y-XGy" id="a4E-37-jRD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pip-6U-zoV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1985" y="479"/>
+        </scene>
         <!--Text Cells Table View Controller-->
         <scene sceneID="ffu-1z-GMc">
             <objects>
-                <tableViewController id="a1k-SZ-uhd" customClass="TextCellsTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="textCellsTableViewController" id="a1k-SZ-uhd" customClass="TextCellsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="86" sectionHeaderHeight="22" sectionFooterHeight="22" id="uB3-fa-fmB">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,10 +142,11 @@
                             <outlet property="delegate" destination="a1k-SZ-uhd" id="IS2-7Z-tid"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="R9W-lS-J7c"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t8W-xp-ml3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2069" y="479"/>
+            <point key="canvasLocation" x="2663" y="485"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SHQ-xM-TsA">
@@ -122,6 +168,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="tL5-uV-927"/>
+        <segue reference="QaE-eW-t69"/>
     </inferredMetricsTieBreakers>
 </document>

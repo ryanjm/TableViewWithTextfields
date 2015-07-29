@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ContainerViewController.h"
 #import "TextCellsTableViewController.h"
 
 @interface ViewController ()
@@ -28,11 +29,18 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"manyCellSegue"]) {
+        ContainerViewController *tableView = segue.destinationViewController;
+        tableView.title = @"Not working - many";
+        tableView.numOfRows = 15;
+    }
+    else if ([[segue identifier] isEqualToString:@"basicTVC"]) {
         TextCellsTableViewController *tableView = segue.destinationViewController;
+        tableView.title = @"Working - many";
         tableView.numOfRows = 15;
     }
     else {
-        TextCellsTableViewController *tableView = segue.destinationViewController;
+        ContainerViewController *tableView = segue.destinationViewController;
+        tableView.title = @"Not working - one";
         tableView.numOfRows = 1;
     }
 }

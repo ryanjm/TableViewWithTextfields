@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C359CD41B68097900207327 /* ContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C359CD31B68097900207327 /* ContainerViewController.m */; };
 		1C7689DD1B5ECFFA009A31E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7689DC1B5ECFFA009A31E7 /* main.m */; };
 		1C7689E01B5ECFFA009A31E7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7689DF1B5ECFFA009A31E7 /* AppDelegate.m */; };
 		1C7689E31B5ECFFA009A31E7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7689E21B5ECFFA009A31E7 /* ViewController.m */; };
@@ -29,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C359CD21B68097900207327 /* ContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerViewController.h; sourceTree = "<group>"; };
+		1C359CD31B68097900207327 /* ContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerViewController.m; sourceTree = "<group>"; };
 		1C7689D71B5ECFFA009A31E7 /* TableViewInsetBug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewInsetBug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C7689DB1B5ECFFA009A31E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C7689DC1B5ECFFA009A31E7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -99,6 +102,8 @@
 				1C768A011B5ED431009A31E7 /* TextCellsTableViewController.m */,
 				1C768A031B5ED491009A31E7 /* TextTableViewCell.h */,
 				1C768A041B5ED491009A31E7 /* TextTableViewCell.m */,
+				1C359CD21B68097900207327 /* ContainerViewController.h */,
+				1C359CD31B68097900207327 /* ContainerViewController.m */,
 			);
 			path = TableViewInsetBug;
 			sourceTree = "<group>";
@@ -231,6 +236,7 @@
 			files = (
 				1C768A021B5ED431009A31E7 /* TextCellsTableViewController.m in Sources */,
 				1C7689E31B5ECFFA009A31E7 /* ViewController.m in Sources */,
+				1C359CD41B68097900207327 /* ContainerViewController.m in Sources */,
 				1C768A051B5ED491009A31E7 /* TextTableViewCell.m in Sources */,
 				1C7689E01B5ECFFA009A31E7 /* AppDelegate.m in Sources */,
 				1C7689DD1B5ECFFA009A31E7 /* main.m in Sources */,
@@ -432,6 +438,7 @@
 				1C7689FC1B5ECFFA009A31E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1C7689FD1B5ECFFA009A31E7 /* Build configuration list for PBXNativeTarget "TableViewInsetBugTests" */ = {
 			isa = XCConfigurationList;
@@ -440,6 +447,7 @@
 				1C7689FF1B5ECFFA009A31E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,6 +8,12 @@
 
 #import "TextTableViewCell.h"
 
+@interface TextTableViewCell ()
+
+@property (nonatomic) CGFloat textViewIntrinsicContentSizeHeight;
+
+@end
+
 @implementation TextTableViewCell
 
 - (void)awakeFromNib {
@@ -18,6 +24,18 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+//    [self.textView setEditable:NO];
+//    [self.textView setUserInteractionEnabled:NO];
+    
+}
+
+- (void)textViewDidChange:(UITextView *)textView
+{
+    CGFloat intrinsicHeight = [textView intrinsicContentSize].height;
+//    if (intrinsicHeight != 0 && intrinsicHeight != self.textViewIntrinsicContentSizeHeight) {
+//        self.intrinsicContentSizeChangedBlock();
+//    }
+    self.textViewIntrinsicContentSizeHeight = intrinsicHeight;
 }
 
 @end
